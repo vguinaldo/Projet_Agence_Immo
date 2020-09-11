@@ -113,7 +113,7 @@
                                         </button>
                                     </p>
                                     <p class="control">
-                                        <a href="team.php" class="button is-light">
+                                        <a href="index.php" class="button is-light">
                                             Annuler
                                         </a>
                                     </p>
