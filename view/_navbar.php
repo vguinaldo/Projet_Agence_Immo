@@ -9,31 +9,31 @@
 
     <div id="navbarBasicExample" class="navbar-menu">
         <div class="navbar-start">
-            <a href="../homepage/homepage.php" class="navbar-item">
+            <a href="../../controller/homepageController.php" class="navbar-item">
                 Accueil
             </a>
 
-            <a href="../team/team.php" class="navbar-item">
+            <a href="../../controller/teamController.php" class="navbar-item">
                 Equipe
             </a>
 
-            <a href="../property/property.php" class="navbar-item">
+            <a href="../../controller/propertyController.php" class="navbar-item">
                 Bien
             </a>
 
-            <a href="../tenant/tenant.php" class="navbar-item">
+            <a href="../../controller/tenantController.php" class="navbar-item">
                 Fiche locataire
             </a>
 
-            <a href="../owner/owner.php" class="navbar-item">
+            <a href="../../controller/ownerController.php" class="navbar-item">
                 Fiche propriétaire
             </a>
 
-            <a href="../tracker/tracker.php" class="navbar-item">
+            <a href="../../controller/trackerController.php" class="navbar-item">
                 Tracker
             </a>
 
-            <a class="navbar-item">
+            <a href="../../controller/disconnectController.php" class="navbar-item">
                 Déconnexion
             </a>
         </div>

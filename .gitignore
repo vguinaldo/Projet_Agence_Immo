@@ -1,2 +1,4 @@
 
 *.xml
+controller/config.php
+.idea/Projet_Agence_Immo.iml
