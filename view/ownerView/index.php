@@ -43,7 +43,7 @@ if (isset($_SESSION['email'])) {
                             <td><?php echo $oInfo['email'] ?></td>
                             <td><?php echo $oInfo['phone'] ?></td>
                             <td><i class="fas fa-edit"></i></td>
-                            <td id="<?php echo $oInfo['id'] ?>"><i class="fas fa-trash"></i></td>
+                            <<td id="<?php echo $oInfo['id'] ?>"><i class="fas fa-trash"></i></td>
                         </tr>
                         <?php
                     }

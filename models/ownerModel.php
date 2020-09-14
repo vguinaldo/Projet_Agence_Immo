@@ -36,4 +36,23 @@ function getOwners()
     return $return;
 }
 
+function deleteOwner($var) {
+    global $user, $pwd, $dbConnStr;
+    if ($dbConn = oci_connect($user, $pwd, $dbConnStr)) {
+        $req = "DELETE FROM PROPRIETAIRE WHERE id = $var";
+
+        $stmt = oci_parse($dbConn, $req);
+        if (!oci_execute($stmt)) {
+            $err = oci_error($stmt);
+            trigger_error('Query failed: ' . $err['message'], E_USER_ERROR);
+        }
+
+        oci_free_statement($stmt);
+        oci_close($dbConn);
+    } else {
+        $err = oci_error();
+        trigger_error('Could not establish a connection ' . $err['message'], E_USER_ERROR);
+    }
+}
+
 ?>

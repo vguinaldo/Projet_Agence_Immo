@@ -35,7 +35,8 @@ if (isset($_SESSION['email'])) {
                                             <div class="field">
                                                 <label class="label">Prénom</label>
                                                 <div class="control has-icons-right">
-                                                    <input id="firstname" class="input" type="text" placeholder="Jean">
+                                                    <input name="firstname" class="input" type="text"
+                                                           placeholder="Jean">
                                                     <span class="icon is-small is-right"><i
                                                                 class="fas fa-exclamation-triangle"></i></span>
                                                 </div>
@@ -45,7 +46,8 @@ if (isset($_SESSION['email'])) {
                                             <div class="field">
                                                 <label class="label">Nom</label>
                                                 <div class="control has-icons-right">
-                                                    <input id="lastname" class="input" type="text" placeholder="Dupont">
+                                                    <input name="lastname" class="input" type="text"
+                                                           placeholder="Dupont">
                                                     <span class="icon is-small is-right"><i
                                                                 class="fas fa-exclamation-triangle"></i></span>
                                                 </div>
@@ -59,7 +61,8 @@ if (isset($_SESSION['email'])) {
                                             <div class="field">
                                                 <label class="label">Email</label>
                                                 <div class="control has-icons-left has-icons-right">
-                                                    <input class="input" type="email" placeholder="adresse@example.com">
+                                                    <input name="email" class="input" type="email"
+                                                           placeholder="adresse@example.com">
                                                     <span class="icon is-small is-left"><i
                                                                 class="fas fa-envelope"></i></span>
                                                     <span class="icon is-small is-right"><i
@@ -71,7 +74,8 @@ if (isset($_SESSION['email'])) {
                                             <div class="field">
                                                 <label class="label">Téléphone</label>
                                                 <div class="control has-icons-left has-icons-right">
-                                                    <input class="input" type="email" placeholder="0607080910">
+                                                    <input name="phone" class="input" type="text"
+                                                           placeholder="0607080910">
                                                     <span class="icon is-small is-left"><i
                                                                 class="fas fa-envelope"></i></span>
                                                     <span class="icon is-small is-right"><i
@@ -86,7 +90,8 @@ if (isset($_SESSION['email'])) {
                                             <div class="field">
                                                 <label class="label">Salaire mensuel (€)</label>
                                                 <div class="control has-icons-left has-icons-right">
-                                                    <input class="input" type="number" placeholder="1500" min="0">
+                                                    <input name="salaire" class="input" type="number" placeholder="1500"
+                                                           min="0">
                                                     <span class="icon is-small is-left"><i
                                                                 class="fas fa-envelope"></i></span>
                                                     <span class="icon is-small is-right"><i
@@ -99,9 +104,14 @@ if (isset($_SESSION['email'])) {
                                                 <label class="label">Agence</label>
                                                 <div class="control">
                                                     <div class="select">
-                                                        <select>
-                                                            <option>Select dropdown</option>
-                                                            <option>With options</option>
+                                                        <select name="agence">
+                                                            <?php foreach ($_SESSION['aAgences'] as $oAgence) {
+                                                                ?>
+                                                                <option value="<?php echo $oAgence['id']?>"><?php echo $oAgence['nom']?></option>
+                                                                <?php
+                                                            }
+                                                            ?>
+
                                                         </select>
                                                     </div>
                                                 </div>

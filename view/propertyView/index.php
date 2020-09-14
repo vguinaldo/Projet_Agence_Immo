@@ -26,6 +26,7 @@ if (isset($_SESSION['email'])) {
                         <thead>
                         <tr>
                             <th>id</th>
+                            <th>Email propriétaire</th>
                             <th>Type</th>
                             <th>Catégorie</th>
                             <th>Surface (m²)</th>
@@ -44,6 +45,7 @@ if (isset($_SESSION['email'])) {
                             ?>
                             <tr>
                                 <td><?php echo $oInfo['id'] ?></td>
+                                <td><?php echo $oInfo['email'] ?></td>
                                 <td><?php echo $oInfo['type'] ?></td>
                                 <td><?php echo $oInfo['categorie'] ?></td>
                                 <td><?php echo $oInfo['surface'] ?></td>

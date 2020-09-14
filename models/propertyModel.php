@@ -6,7 +6,7 @@ function getProperty()
     global $user, $pwd, $dbConnStr;
     $return = array();
     if ($dbConn = oci_connect($user, $pwd, $dbConnStr)) {
-        $req = "SELECT id_bien, type_bien, type_vente, adresse, surface, ville.zipcode as code_postal, ville.nom as ville, nombre_piece, prix FROM bien JOIN ville ON bien.id_ville = ville.id_ville ORDER BY id_bien";
+        $req = "SELECT id_bien, proprietaire.adresse_mail AS email, type_bien, type_vente, adresse, surface, ville.zipcode as code_postal, ville.nom as ville, nombre_piece, prix FROM bien JOIN ville ON bien.id_ville = ville.id_ville JOIN proprietaire ON proprietaire.id_proprietaire = bien.id_proprietaire ORDER BY id_bien";
 
         $stmt = oci_parse($dbConn, $req);
         if (!oci_execute($stmt)) {
@@ -18,6 +18,7 @@ function getProperty()
 
         while (oci_fetch($stmt)) {
             $aInfo['id'] = oci_result($stmt, 'ID_BIEN');
+            $aInfo['email'] = oci_result($stmt, 'EMAIL');
             $aInfo['type'] = oci_result($stmt, 'TYPE_BIEN');
             $aInfo['categorie'] = oci_result($stmt, 'TYPE_VENTE');
             $aInfo['surface'] = oci_result($stmt, 'SURFACE');

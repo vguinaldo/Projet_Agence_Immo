@@ -38,10 +38,10 @@ if (isset($_SESSION['email'])) {
                                             <label class="label">Type</label>
                                             <div class="control">
                                                 <div class="select">
-                                                    <select required>
+                                                    <select name="type" required>
                                                         <option></option>
-                                                        <option>Select dropdown</option>
-                                                        <option>With options</option>
+                                                        <option>Appartement</option>
+                                                        <option>Maison</option>
                                                     </select>
                                                 </div>
                                             </div>
@@ -52,10 +52,10 @@ if (isset($_SESSION['email'])) {
                                             <label class="label">Catégorie</label>
                                             <div class="control">
                                                 <div class="select">
-                                                    <select required>
+                                                    <select name="categorie" required>
                                                         <option></option>
-                                                        <option>Select dropdown</option>
-                                                        <option>With options</option>
+                                                        <option value="Location">Location</option>
+                                                        <option value="Vente">Vente</option>
                                                     </select>
                                                 </div>
                                             </div>
