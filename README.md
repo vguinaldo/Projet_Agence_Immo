@@ -13,7 +13,7 @@ Utilisation du "Modèle-Vue-Contrôleur":
 - Vue: Affichage des informations
 - Contrôleur: Intermédiaire, transmet les informations du Modèle à la Vue.
 
-Possibilité d'essayer avec les utilisateurs suivants (username/password):
+Possibilité d'essayer avec les utilisateurs (fictifs) suivants (username/password):
 - a.iverson@gestion.immo.fr / aiverson
 - r.allen@gestion.immo.fr / rallen
 - a.caruso@gestion.immo.fr / acaruso
